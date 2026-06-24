@@ -21,6 +21,13 @@ class User(Base):
 
     ranking_score = Column(Float, default=0)
 
+    bonus_points = Column(Float, default=0)
+
+    streak_completed = Column(Integer, default=0)
+
+    daily_bonus_awarded_date = Column(Date, nullable=True)
+
+
 
 class Transaction(Base):
     __tablename__ = "transactions"
@@ -32,5 +39,7 @@ class Transaction(Base):
     user_id = Column(Integer, nullable=False)
 
     amount = Column(Float, nullable=False)
+
+    transaction_date = Column(Date, nullable=False)
 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
