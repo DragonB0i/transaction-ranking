@@ -1,4 +1,4 @@
-const API = "https://transaction-ranking.onrender.com/";
+const API = "https://transaction-ranking.onrender.com";
 
 async function createTransaction() {
 
