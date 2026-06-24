@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import date, timedelta
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import engine, Base, get_db
 from app.models import User, Transaction
@@ -11,6 +12,13 @@ import app.models
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 STREAK_REQUIREMENTS = {
     0: 100,
     1: 250,

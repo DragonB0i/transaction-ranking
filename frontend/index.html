@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction Ranking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Transaction Ranking System</h1>
+
+    <div class="card">
+        <h2>Create Transaction</h2>
+
+        <input id="txnId" placeholder="Transaction ID">
+        <input id="userId" placeholder="User ID">
+        <input id="amount" placeholder="Amount">
+
+        <button onclick="createTransaction()">
+            Submit
+        </button>
+    </div>
+    <div id="health-status">
+    Checking...
+    </div>
+    <div class="card">
+
+    <h2>User Summary</h2>
+
+    <input
+        id="summaryUserId"
+        placeholder="User ID"
+    >
+
+    <button onclick="loadSummary()">
+        Get Summary
+    </button>
+
+    <div id="summary"></div>
+
+</div>
+    <div class="card">
+        <h2>Leaderboard</h2>
+
+        <button onclick="loadRanking()">
+            Refresh Ranking
+        </button>
+
+        <div id="ranking"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

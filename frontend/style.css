@@ -1,0 +1,26 @@
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+.card{
+    border:1px solid #ddd;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+input{
+    display:block;
+    margin:10px 0;
+    padding:10px;
+}
+
+button{
+    padding:10px 20px;
+}
+#health-status{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-weight:bold;
+}
